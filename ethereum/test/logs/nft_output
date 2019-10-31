@@ -1,0 +1,1486 @@
+newman
+
+Block Array Bill of Ladding dApp
+
+Iteration 1/17
+
+❏ nft
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 137ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 47ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 46ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 16ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 83ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 45ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 47ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 226B, 56ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 43ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [425 Unordered Collection, 230B, 48ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 6ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 37ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 238B, 55ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 2/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 40ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 37ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 35ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 12ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 48ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 39ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 38ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 226B, 46ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 37ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 37ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 238B, 74ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 3/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 39ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 33ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 34ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 16ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 41ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 38ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 37ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 226B, 42ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 37ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [400 Bad Request, 243B, 2ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 34ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 238B, 41ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 4/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 34ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 33ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 29ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 14ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 55ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 32ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 41ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 226B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 32ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 5ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 238B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 5/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 30ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 36ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 67ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 12ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 48ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 37ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 35ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 226B, 31ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 34ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 238B, 34ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 6/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 71ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 35ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 29ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 12ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 44ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 41ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 43ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 226B, 37ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 36ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 238B, 37ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 7/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 35ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 37ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 28ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 9ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 46ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 37ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 34ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 226B, 34ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 34ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 31ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 238B, 37ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 8/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 32ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 34ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 37ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 11ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 41ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 226B, 32ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 36ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 29ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 238B, 47ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [400 Bad Request, 243B, 6ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 9/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 30ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 32ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 31ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 13ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 47ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 39ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 32ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 226B, 32ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 31ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 238B, 45ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [400 Bad Request, 243B, 6ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 10/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 33ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 34ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 35ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 13ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 44ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 39ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 37ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 226B, 39ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [425 Unordered Collection, 230B, 5ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 26ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 238B, 39ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 11/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 30ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 31ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 29ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 11ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 44ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 32ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 36ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 226B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 2ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 238B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 12/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 35ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 42ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 30ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 12ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 42ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 28ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 32ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 226B, 36ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 30ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 238B, 34ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 13/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 35ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 31ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 33ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 12ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 45ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 226B, 32ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 38ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 35ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [200 OK, 238B, 34ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 2ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 14/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 29ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 31ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 29ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff [425 Unordered Collection, 230B, 12ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd [200 OK, 231B, 78ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 37ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x23f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x23f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff [425 Unordered Collection, 230B, 35ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0x13f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x13f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff&extraData=0 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0x13f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x13f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x23f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0x13f681646d4a755815f9cb19e1acc8565a0c2ac&status=-1 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff [425 Unordered Collection, 230B, 31ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x23f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0x13f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0x13f681646d4a755815f9cb19e1acc8565a0c2ac&to=0x13f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff&data=0 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0x89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x23f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0x12f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xc89edaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc9efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [425 Unordered Collection, 230B, 6ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xc89edaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xc9efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x23f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 15/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 30ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 32ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 33ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 12ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58c [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 36ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 226B, 2ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0x [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac&status=5 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 30ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac&to=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0x [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xdc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xdc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xdc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [425 Unordered Collection, 230B, 5ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xdc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xdc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0xd123f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 16/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 31ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 35ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 32ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 12ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=ghainfiashg [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 30ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=0x1t3f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=0x1t3f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 32ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=0xg23f681646d4a755815f9cb19e1acc8565a0c2ac&to=0xg23f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=0xg [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=0xg23f681646d4a755815f9cb19e1acc8565a0c2ac&to=0xg23f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=0x1g3f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=0xg23f681646d4a755815f9cb19e1acc8565a0c2ac&status=g [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 31ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=0x1t3f681646d4a755815f9cb19e1acc8565a0c2ac&operator=0xg23f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=0xg23f681646d4a755815f9cb19e1acc8565a0c2ac&to=0xg23f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0xg [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0xg89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x1t3f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0xg23f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=0xg89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xg89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=0xg89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=0xg89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=0x1t3f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 17/17
+
+↳ Returns the token contract's name
+  GET localhost:3000/nft/name [200 OK, 237B, 26ms]
+  ✓  Returns the right name
+
+↳ Returns the token contract's symbol
+  GET localhost:3000/nft/symbol [200 OK, 228B, 35ms]
+  ✓  Returns the right symbol
+
+↳ An API endpoint to get the total supply of tokens in the ERC721 contract
+  GET localhost:3000/nft/totalSupply [200 OK, 231B, 29ms]
+  ✓  Returns the right type
+
+↳ Returns the Token URI
+  GET localhost:3000/nft/tokenURI/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 11ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns an interface's support status
+  GET localhost:3000/nft/supportsInterface/?interfaceId=0x80ac58cd0 [400 Bad Request, 226B, 4ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft tracked by the contract
+  GET localhost:3000/nft/tokenByIndex/?index=0x0000000000000000000000000000000000000000000000000000000000000001 [425 Unordered Collection, 230B, 31ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Returns the token identifier of the `index`-th nft assigned to the `owner`
+  GET localhost:3000/nft/tokenOfOwnerByIndex/?owner=123f681646d4a755815f9cb19e1acc8565a0c2ac&index=0x0000000000000000000000000000000000000000000000000000000000000001 [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Count all NFTs assigned to an owner
+  GET localhost:3000/nft/balanceOf/?owner=123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Find the owner of an NFT
+  GET localhost:3000/nft/ownerOf/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 204ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Transfers the ownership of an NFT from one address to another address
+  POST localhost:3000/nft/safeTransferFrom/?from=123f681646d4a755815f9cb19e1acc8565a0c2ac&to=123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&extraData=o [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Transfer ownership of an NFT without safety checks
+  POST localhost:3000/nft/transferFrom/?from=123f681646d4a755815f9cb19e1acc8565a0c2ac&to=123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Change or reaffirm the approved address for an NFT
+  POST localhost:3000/nft/approve/?approved=123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Allows Block Array to issue univeral approval
+  POST localhost:3000/nft/setApprovalForAll/?operator=123f681646d4a755815f9cb19e1acc8565a0c2ac&status=1 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Get the approved address for a single NFT
+  GET localhost:3000/nft/getApproved/?tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8 [425 Unordered Collection, 230B, 31ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Query if an address is an authorized operator for another address
+  GET localhost:3000/nft/isApprovedForAll/?owner=123f681646d4a755815f9cb19e1acc8565a0c2ac&operator=123f681646d4a755815f9cb19e1acc8565a0c2ac [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns the Right Type
+
+↳ Signed Transfer
+  POST localhost:3000/nft/signedTransfer/?from=123f681646d4a755815f9cb19e1acc8565a0c2ac&to=123f681646d4a755815f9cb19e1acc8565a0c2ac&tokenId=0x00000000000000000000000000000000000000000000000000000000000003e8&data=0 [425 Unordered Collection, 230B, 6ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Creates a new record
+  POST localhost:3000/nft/createRecord/?recordID=0c89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=123f681646d4a755815f9cb19e1acc8565a0c2ac&participant=0123f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for Block Array
+  POST localhost:3000/nft/versionRecord/?currentHash=c89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=c89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Versions a record for the owner
+  POST localhost:3000/nft/versionRecord/signed/?currentHash=c89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&newHash=c89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6&owner=123f681646d4a755815f9cb19e1acc8565a0c2ac [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+┌─────────────────────────┬──────────┬──────────┐
+│                         │ executed │   failed │
+├─────────────────────────┼──────────┼──────────┤
+│              iterations │       17 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│                requests │      323 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│            test-scripts │      646 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│      prerequest-scripts │      323 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│              assertions │      459 │        0 │
+├─────────────────────────┴──────────┴──────────┤
+│ total run duration: 15.3s                     │
+├───────────────────────────────────────────────┤
+│ total data received: 4.29KB (approx)          │
+├───────────────────────────────────────────────┤
+│ average response time: 20ms                   │
+└───────────────────────────────────────────────┘

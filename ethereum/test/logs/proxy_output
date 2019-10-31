@@ -1,0 +1,632 @@
+newman
+
+Block Array Bill of Ladding dApp
+
+Iteration 1/16
+
+❏ proxy
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xC2572742 [200 OK, 267B, 87ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 33ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 30ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 4ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xC2572742&target=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 5ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 2/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xC2572742 [200 OK, 267B, 208ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 38ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 32ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 2ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xC2572742&target=0xC257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 5ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xC257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xC257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 7ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 3/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xC2572742 [200 OK, 267B, 33ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 30ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 29ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 2ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xC2572742&target=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 4/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xC2572742 [200 OK, 267B, 30ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 28ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 35ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 3ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xC2572742&target=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 5/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xC2572742 [200 OK, 267B, 31ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 29ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 30ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 3ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xC2572742&target=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 6/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xC2572742 [200 OK, 267B, 31ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 32ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 29ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 3ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xC2572742&target=0xC257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xC257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xC257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 7/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xC2572742 [200 OK, 267B, 36ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 29ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 31ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 3ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xC2572742&target=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 8/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xC2572742 [200 OK, 267B, 28ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 29ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 30ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 3ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xC2572742&target=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 9/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xC2572742 [200 OK, 267B, 37ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 31ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 31ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 2ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xC2572742&target=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 10/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xC2572742 [200 OK, 267B, 29ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 28ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 29ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 3ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xC2572742&target=0xC257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xC257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xC257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 11/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xC2572742 [200 OK, 267B, 31ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 35ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 27ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 3ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xC2572742&target=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [400 Bad Request, 243B, 2ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 12/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xC2572742 [200 OK, 267B, 30ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 27ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 28ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 3ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xC2572742&target=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 5ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 13/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xC2572742 [200 OK, 267B, 30ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 65ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 31ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 3ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xC2572742&target=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xC257274276a4E539741Ca11b590B9447B26A8051 [400 Bad Request, 243B, 2ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [400 Bad Request, 243B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 14/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0x2572742 [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 41ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 30ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 2ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0x2572742&target=0xC57274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0x257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0x257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 15/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0x1C2572742 [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 31ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 33ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 2ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0x1C2572742&target=0x1C257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0x1C257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0x1C257274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+Iteration 16/16
+
+↳ Gets address of Function
+  GET localhost:3000/proxy/getTarget/?id=0xCg572742 [400 Bad Request, 226B, 3ms]
+  ✓  Rejects Invalid Data Types
+  ✓  Returns Valid Data Type
+
+↳ Gets address of the Master Contract
+  GET localhost:3000/proxy/getMaster [200 OK, 267B, 29ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the controller Contract
+  GET localhost:3000/proxy/getController [200 OK, 271B, 29ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Gets address of the Universal Proxy Contract
+  GET localhost:3000/proxy/getUniversalProxy [200 OK, 275B, 2ms]
+  ✓  Returns Valid Data Type
+  ✓  Status code is 200
+
+↳ Sets the address of Function
+  POST localhost:3000/proxy/setTarget/?id=0xCg572742&target=0xCg57274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the new Master Address
+  POST localhost:3000/proxy/changeMaster/?newMaster=0xCg57274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Sets the the new controller address
+  POST localhost:3000/proxy/changeController/?newController=0xCg57274276a4E539741Ca11b590B9447B26A8051 [425 Unordered Collection, 230B, 4ms]
+  ✓  Rejects Invalid Data Types
+
+↳ Pauses the execution
+  POST localhost:3000/proxy/pause [425 Unordered Collection, 230B, 3ms]
+  ✓  Rejects Invalid Data Types
+
+┌─────────────────────────┬──────────┬──────────┐
+│                         │ executed │   failed │
+├─────────────────────────┼──────────┼──────────┤
+│              iterations │       16 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│                requests │      128 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│            test-scripts │      256 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│      prerequest-scripts │      144 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│              assertions │      192 │        0 │
+├─────────────────────────┴──────────┴──────────┤
+│ total run duration: 5.4s                      │
+├───────────────────────────────────────────────┤
+│ total data received: 4.68KB (approx)          │
+├───────────────────────────────────────────────┤
+│ average response time: 15ms                   │
+└───────────────────────────────────────────────┘

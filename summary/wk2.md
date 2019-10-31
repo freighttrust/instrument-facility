@@ -1,0 +1,9 @@
+<h1>Week 2 Summary</h1>
+
+<p>During the second week of development we completed basic smart contract implementation, truffle tests, continuous integration for github, api tests using postman, and basic javascript implementation of endpoints. Additionally we continued the process of improvement on week one's tasks and have updated the documentation and startup scripts to improve usability and accuracy.
+The basic smart contract implementation is a functional set of smart contracts which will meet the implementation needs of Block Array. These smart contracts will need to be updated for gas efficiency and to verify their security in the upcoming weeks.
+The continuous integration for github is a script which will run the postman and truffle tests on new commits added to the github repository. It can be set up to auto merge commits which pass all of the tests, which will streamline future development.
+The truffle tests are a set of javascript unit tests which will verify the modular properties of the code base to ensure that it always meets the intention of the smart contract architecture. They are designed to have near complete code coverage and thus should prevent most bugs.
+The postman api unit tests are a set of tests for each api endpoint that verify that the endpoints will reject on invalid inputs and return the right data types. In combination with the truffle tests, the postman tests will verify the integrity of the whole codebase.
+The javascript endpoint implementation of the endpoints extend the test endpoints from last week. Now, in addition to data sanitation and returning proper values, they will parse the input data, format transactions and make ethereum calls through the infura web3. The new endpoints will also properly validate Block Array signatures of the nonce which protects admin transactions.
+We accomplished our goals for the week and are slightly ahead of schedule.</p>
